@@ -1,0 +1,216 @@
+h1,
+.start {
+	font-family: 'Alfa Slab One', cursive !important;
+}
+
+.invisible {
+	display: none;
+}
+
+.cent {
+	margin: 0px auto;
+	display: block;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+.mb20 {
+	margin-bottom: 20px;
+}
+
+.mb0 {
+    margin-bottom: 0px;
+}
+
+.mt0 {
+    margin-top: 0px;
+}
+
+#startgame {
+	display: block;
+}
+
+.fb {
+	max-width: 200px;
+	margin: 0px auto;
+	display: block;
+}
+
+.switch label {
+	font-size: 1.1rem;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+	background-color: #ccc;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+	background-color: rgb(13, 71, 161);
+}
+
+.modactiv {
+	color: #C62828;
+}
+
+#definitie {
+    font-weight: 700;
+  
+}
+
+.cine-sunt {
+    font-weight: 700;
+    
+}
+.clue {
+	margin: 0px auto;
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	border: solid 2px #17326f;
+	border-radius: 5px;
+	-webkit-box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
+	-moz-box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
+	box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
+    	cursor: pointer;
+}
+
+
+
+.modalthing {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /*background-color: rgb(0,0,0); /* Fallback color */
+  /*background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 450px;
+  cursor: pointer;
+  
+    border: solid 2px #17326f;
+	border-radius: 5px;
+	-webkit-box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
+	-moz-box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
+	box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
+	
+}
+
+.modal-content {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #17326f;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #2d60d2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+#incercare {
+	margin: 0px !important;
+	line-height: 100% !important;
+}
+
+.error {
+	color: red;
+}
+
+.succes {
+	color: green;
+}
+
+.mesajindiciu{
+	cursor: pointer;
+}
+
+
+.letter {
+	margin-bottom: 10px;
+}
+
+.letter a {
+	font-weight: bold;
+}
+
+.menub {
+	font-size: 35px;
+	vertical-align: middle;
+	color: #90949a;
+	cursor: pointer;
+	text-decoration: none;
+	margin-right: 15px;
+}
+
+.reset {color: #90949a57; cursor:default;}
+.resetactiv {color:#90949a; cursor: pointer; }
+
+#nivel {
+	box-shadow: inset 0px 0px 15px 3px #0d47a1;
+	background: linear-gradient(to bottom, #0d47a1 5%, #415989 100%);
+	background-color: #2e466e;
+	border-radius: 17px;
+	-webkit-border-radius: 17px;
+	-moz-border-radius: 17px;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 15px;
+	padding: 5px 15px;
+	cursor: default;
+}
+
+.instructiuni {
+	font-size: 1.2em;
+}
+
+.instructiuni li {
+	margin-bottom: 15px;
+}
+
+.instr_ico {
+	font-size: 25px;
+	vertical-align: middle;
+	color: #2e466e;
+}

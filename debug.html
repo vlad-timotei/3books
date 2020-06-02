@@ -1,0 +1,127 @@
+<html>
+
+
+<script>
+    
+    
+    
+var niveluri = [
+		 
+		 "LUCA|marcu|ioan|NT",  // prima mereu 0
+		 "FAPTE|ioan|romani|NT",  // NT 1-28
+		 "1CORINTENI|romani|2corinteni|NT",
+		 "GALATENI|2corinteni|efeseni|NT",
+		 "FILIPENI|efeseni|coloseni|NT",
+		  "MARCU|matei|luca|NT",
+		 "IOAN|luca|fapte|NT",
+		 "ROMANI|fapte|1corinteni|NT",
+		 "2CORINTENI|1corinteni|galateni|NT",
+		 "EFESENI|galateni|filipeni|NT",
+		 "COLOSENI|filipeni|1tesaloniceni|NT",
+        /* "1TESALONICENI|coloseni|2tesaloniceni|NT", */
+		 "FAPTE|ioan|romani|NT",
+		 "1TIMOTEI|2tesaloniceni|2timotei|NT",
+		 "TIT|2timotei|filimon|NT",
+		 "EVREI|filimon|iacob|NT",
+		 "1PETRU|iacob|2petru|NT",
+        /* "2TESALONICENI|1tesaloniceni|1timotei|NT",*/
+		 "2TIMOTEI|1timotei|tit|NT",
+		 "FILIMON|tit|evrei|NT",
+		 "IACOV|evrei|1petru|NT",
+		 "2PETRU|1petru|1ioan|NT",
+		 "2IOAN|1ioan|3ioan|NT",
+         "1IOAN|2petru|2ioan|NT",
+		 "3IOAN|2ioan|iuda|NT",
+		 "IUDA|3ioan|apocalipsa|NT",
+		  "COLOSENI|filipeni|1tesaloniceni|NT",
+		  "ROMANI|fapte|1corinteni|NT",
+		 "MARCU|matei|luca|NT",  
+        "EXOD|geneza|levitic|VT", // VT 29-77
+		"NUMERI|levitic|deuteronom|VT",
+		"RUT|judecatori|1samuel|VT",
+		"EZRA|2cronici|neemia|VT",
+		"DEUTERONOM|numeri|iosua|VT",
+		"1REGI|2samuel|2regi|VT",
+		"LEVITIC|exod|numeri|VT",
+		"IOSUA|deuteronom|judecatori|VT",
+		"RUT|judecatori|1samuel|VT",
+		"JUDECATORI|iosua|rut|VT",
+		"1SAMUEL|rut|2samuel|VT",
+		"2REGI|1regi|1cronici|VT",
+		"1CRONICI|2regi|2cronici|VT",
+		"IOV|estera|psalmi|VT",
+		"EZRA|2cronici|neemia|VT",
+		"ESTERA|neemia|iov|VT",
+		"PSALMI|iov|proverbe|VT",
+		"1REGI|2samuel|2regi|VT",
+		"NEEMIA|ezra|estera|VT",
+		"PROVERBE|psalmi|eclesiastul|VT",
+		"ECLESIASTUL|proverbe|cantarea-cantarilor|VT",
+		"ISAIA|cantarea-cantarilor|ieremia|VT",
+		"EZECHEL|plangerile-lui-ieremia|daniel|VT",
+		"IEREMIA|isaia|plangerile-lui-ieremia|VT",
+		"NUMERI|levitic|deuteronom|VT",
+		"IEREMIA|isaia|plangerile-lui-ieremia|VT",
+		"PSALMI|iov|proverbe|VT",
+		"2REGI|1regi|1cronici|VT",
+		"RUT|judecatori|1samuel|VT",
+		"EZRA|2cronici|neemia|VT",
+        "EXOD|geneza|levitic|VT",
+		 "ISAIA|cantarea-cantarilor|ieremia|VT",
+		 "DEUTERONOM|numeri|iosua|VT",
+		 "NEEMIA|ezra|estera|VT",
+		 "NUMERI|levitic|deuteronom|VT",
+		 "ECLESIASTUL|proverbe|cantarea-cantarilor|VT",
+		 "OSEA|daniel|ioel|VT",
+		 "AMOS|ioel|obadia|VT",
+		 "IONA|obadia|mica|VT",
+		 "NAUM|mica|habacuc|VT",
+		 "TEFANIA|habacuc|hagai|VT",
+		 "ZAHARIA|hagai|maleahi|VT",
+		  "IOEL|osea|amos|VT",
+		 "OBADIA|amos|iona|VT",
+		 "MICA|iona|naum|VT",
+		 "HABACUC|naum|tefania|VT",
+		 "HAGAI|tefania|zaharia|VT",
+		 "MALEAHI|zaharia|matei|VT",
+		  "MATEI|maleahi|marcu|NT"
+		
+		
+		];
+niveluri.sort();
+for (var x=0;x<niveluri.length;x++)
+    document.write(niveluri[x]+"<br/>");
+    /*
+    
+    
+    
+    
+var ordine = new Array();
+ordine = [0,17,2,26,9,16,7,19,21,8,25,22,13,3,14,1,6,12,15,20,23,5,18,11,4,10,24,29,33,58,38,56,71,34,60,47,41,37,59,45,61,43,40,32,44,46,72,57,39,51,30,74,27,31,62,67,48,70,49,36,53,54,75,55,52,65,68,66,69,63,73,64,50,28,35,42]
+var ni,s,c,b,a,w,l;
+for(var j=0;j<ordine.length;j++)
+{
+    ni=j+1;
+    s=niveluri[ordine[j]].split("|",4);
+    c=s[0]; 
+    b=s[1]
+    a=s[2]
+    w=s[3];
+    l=c.length;
+    if(l>12) document.write("<b>");
+    document.write("Nivel "+ni+" | cuvant "+ordine[j]+" | "+niveluri[ordine[j]]+" Lungime: "+l+"<br/>");
+    if(l>12) document.write("</b>");
+
+}
+ 
+//var i = prompt("Ce cuvant vrei sa iti zic?");
+//document.write(niveluri[i]);
+    
+   */ 
+    
+</script>
+
+
+
+
+</html>
