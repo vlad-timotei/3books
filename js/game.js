@@ -1,11 +1,11 @@
 // Un joc creat de Vlad Timotei 2020
- // ver. 02062020
+ // ver. 03062020F
   var nivel, solutie, lungime_solutie, lungime_incercare, corect, definitie, mode, nr_butoane, workaroundshint, timeforhint, stats;
   var startofgame, endofgame, timepergame, scorepergame, totalscore; 
   var coeficient_dificultate = {easy:1, hard:1.75};
   var coeficient_indiciu=1;
   var indiciu_folosit=0;
-  var joc="3carti_02062020";
+  var joc="3carti_03062020F";
   var btns = []; //incepe cu 1
   var sound=1;
   var nrincercari;
@@ -43,9 +43,9 @@
 		 "2TIMOTEI|1timotei|tit|NT",
 		 "TIT|2timotei|filimon|NT",
          "FILIMON|tit|evrei|NT",
-		 "EVREI|filimon|iacob|NT",
+		 "EVREI|filimon|iacov|NT",
          "IACOV|evrei|1petru|NT",
-		 "1PETRU|iacob|2petru|NT",
+		 "1PETRU|iacov|2petru|NT",
 		 "2PETRU|1petru|1ioan|NT",
          "1IOAN|2petru|2ioan|NT",
 		 "2IOAN|1ioan|3ioan|NT",
