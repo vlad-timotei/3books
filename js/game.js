@@ -73,7 +73,7 @@
 		"ECLESIASTUL|proverbe|cantarea-cantarilor|VT",
 		"ISAIA|cantarea-cantarilor|ieremia|VT",
         "IEREMIA|isaia|plangerile-lui-ieremia|VT",
-		"EZECHEL|plangerile-lui-ieremia|daniel|VT",
+		"EZECHIEL|plangerile-lui-ieremia|daniel|VT",
         "DANIEL|ezechel|osea|VT",
         "OSEA|daniel|ioel|VT",
         "IOEL|osea|amos|VT",
