@@ -216,3 +216,28 @@ h1,
 	vertical-align: middle;
 	color: #2e466e;
 }
+
+/*Style for back button*/
+.back-link {
+	margin: 15px;
+	display: inline-block;
+}
+
+.back-link img {
+	vertical-align: middle;
+}
+
+.orange-button {
+	padding: 15px 25px;
+	font-weight: 700;
+	font-size: 20px;
+	border-radius: 30px;
+	display: inline-block;
+	color: #fff!important;
+	text-decoration: none!important;
+	background: #faa248;
+	border: none;
+	line-height: 14px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
