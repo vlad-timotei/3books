@@ -351,7 +351,7 @@
   
   function send_stats(){
   var xhttp = new XMLHttpRequest(); 
-  xhttp.open("GET", "https://vladtimotei.ro/scripts/3books_stats.php"+stats, true);
+  xhttp.open("GET", "https://vladtimotei.ro/scripts/3books/3books_stats.php"+stats, true);
   xhttp.send();
   }
   
