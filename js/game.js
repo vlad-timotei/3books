@@ -499,7 +499,7 @@ function put_ranking(whattype) {
         output += "<div class='cent center'>și alți <b>" + ranking[0] + "</b> jucători</div>";
         $("#clasament-final").html(output);
     }
-	if(ranking[1]<3) {$("#firstofthem").removeClass("invisible"); $("#lastofthem").addClass("invisible"); }
+	if(ranking[1]<4) {$("#firstofthem").removeClass("invisible"); $("#lastofthem").addClass("invisible"); }
 	else {$("#firstofthem").addClass("invisible"); $("#lastofthem").removeClass("invisible"); }
 }
 
