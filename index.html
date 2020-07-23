@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
   <head>
     <title>3 Cărți - Fun Bible</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/style.css?ver=03062020.F" type="text/css" rel="stylesheet" media="all" />
+    <link href="css/style.css?ver=23072020" type="text/css" rel="stylesheet" media="all" />
   </head>
   <body>
     <!--START - Connection to FunBible.net-->
@@ -30,26 +30,35 @@
       <img src="https://funbible.net/assets/logo.svg" height="60" />
     </a>
     <!--END - Connection to FunBible.net-->
-    <div class="section no-pad-bot" id="startgame">
-      <div class="container">
-        <img class="header center fb" src="https://funbible.net/assets/logo.svg" >
-        <h1 class="header center red-text text-darken-4">Trei cărți</h1>
-        <div class="row center">
-          <h5 class="header col s12 m6 offset-m3 light">Sunt o carte din Biblie și am pe lângă mine alte două. Află cine sunt și apoi selectează literele în ordine!</h5>
-        </div>
-        <div class="row center">
-          <div class="switch" ><label><span id="easy">Mod ușor</span><input type="checkbox" id="mode" onClick="s_switch_check()"><span class="lever"></span><span id="hard">Mod avansat</span></label></div>
-          <br/>
-          <a   class="btn-large waves-effect waves-light yellow darken-3 start" onclick="start(1);" id="startlevel">Începe</a>
-        </div>
+  <div class="section no-pad-bot" id="startgame">
+         <div class="container">
+            <img class="header center fb" src="https://funbible.net/assets/logo.svg" >
+            <h1 class="header titlu-joc center blue-text text-darken-4">4 Imagini</h1>
+            <div class="row center mb0">
+               <h5 class="header col s12 m6 offset-m3 light mb20">Bine ai venit<span id="salut"></span>! Cele patru imagini pe care le vei vedea au în comun un cuvânt. Găsește cuvântul și apoi selectează literele în ordine, pentru a forma cuvântul!</h5>
+            </div>
+            <div class="row center mb0">
+               <div id="noname" class="mb10"><span id="alertme"></span><span class="nl">Numele tău: </span><br/><input type="text" placeholder="Scrie numele tău aici" name="nume-participant" id="nume-participant" ><br/></div>
+			   <a class="btn-large waves-effect waves-light green darken-2 start mb20" onclick="start(1);" id="startlevel">Începe</a><br/>
+               <div class="switch" ><label><span id="easy">Mod ușor</span><input type="checkbox" id="mode"><span class="lever"></span><span id="hard">Mod avansat</span></label></div>
+               <br/>
+            </div>
+            <div class="row center">
+               <b class="clasament-title">Clasament</b>
+               <br/>
+               <div id="clasament">
+               </div>
+               <br/>
+               <img src="https://funbible.net/assets/o-yellow.png" class="decoration"><img src="https://funbible.net/assets/x-pink.png" class="decoration"> <img src="https://funbible.net/assets/o-blue.png" class="decoration"><br/>
+            </div>
+         </div>
       </div>
-    </div>
     <div class="invisible section no-pad-bot" id="info">
       <div class="container">
         <h1 class="header center red-text text-darken-4">Trei cărți</h1>
         <div class="row">
           <div class="col s12 light m6 offset-m3">
-		   <i class="center cent"> versiunea <b>2.0</b></i>
+		   <i class="center cent"> versiunea <b>2.5</b></i>
             <ul class="instructiuni">
 			 
               <li><i class="instr_ico material-icons">lightbulb_outline</i>Privește cele două imagini și încearcă să-ți amintești, fără să te uiți în Biblie, ce carte se află între cele două cărți afșate. Citește și indiciul de sub imagini, care îți spune din ce parte a Bibliei este! Când găsești soluția, apasă, pe rând pe literele colorate. </li>
@@ -60,8 +69,8 @@
               <li><b>Succes!</b></li>
 			 <br/>
 			  <li><i>Sursele imaginilor din acest proiect pot fi consultate <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS4AMLdDuOoTNoptCtqdrY4BcIaPlrwTnh_qblgKGYXBwUqoVGIvP82v8YSSOcWsuTu5W5bDebCwgrv/pubhtml?gid=348971332&single=true">aici</a>. </i></li>
-           
-            </ul>
+              <li><i>Citește despre politica de confidențialitate și utilizarea cookie-urilor <a href="https://docs.google.com/document/d/1JL21qeYWquP3HaMKV6k0TNsNJVEp2imjdsqUedLjriw/edit?usp=sharing" target="_new">aici</a>. </i></li>
+           </ul>
           </div>
         </div>
         <div class="row center">
@@ -69,6 +78,23 @@
         </div>
       </div>
     </div>
+	 <div class="invisible section no-pad-bot" id="rankingpage">
+         <div class="container">
+            <h1 class="header center blue-text text-darken-4 titlu-joc">Clasament</h1>
+            <div class="row">
+               <div class="col s12 light m6 offset-m3">
+                  <div id="clasament-complet">
+                  </div>
+                  <br/>
+                  <h3 class="clasament-title cent center" id="lasttofthem"><span id="lastofthem" class="invisible" >Nu te descuraja dacă nu ești printre primii! Vei ajunge curând!</span>
+				  <span id="firstofthem" class="invisible">Felicitări ești printre primii jucători! Ține-o tot așa!</span></h3>
+               </div>
+            </div>
+            <div class="row center">
+               <a   class="btn-large waves-effect waves-light green darken-1 start" onclick="ranking_page(1);" >Înapoi acasa</a>
+            </div>
+         </div>
+      </div>	
     <div class="invisible section no-pad-bot" id="endgame">
       <div class="container">
         <img class="header center fb" src="https://funbible.net/assets/logo.svg" >
@@ -83,7 +109,7 @@
     </div>
     <div class="invisible container" id="game">
       <div class="section">
-          <h5 class="center blue-text text-darken-4 mb20" id="definitie" >Sunt o carte din Biblie și am pe lângă mine pe</h5>
+          <h5 class="center blue-text text-darken-4 mb20" id="definition" >Sunt o carte din Biblie și am pe lângă mine pe</h5>
         <div class="row">
           <div class="col s6 m3 offset-m3">
             <img src="" id="clue1" onClick="open_modal(this.src);" class="clue c1" />
@@ -95,8 +121,8 @@
         <div id="resetable">
           <div class="row">
             <div class="col s12">
-               <h5 class="center mb0 mt0 red-text text-darken-4 cine-sunt" >Cine sunt?</h5>
-              <h2 class="center" id="incercare" >_ _ _ _ _ _</h2>
+               <h5 class="center mb0 mt0 red-text text-darken-4 whoami" >Cine sunt?</h5>
+              <h2 class="center" id="usertry" >_ _ _ _ _ _</h2>
             </div>
           </div>
           <div class="row" id="litere_posibile">
@@ -120,7 +146,7 @@
           <div class="row">
             <div class="col center s2 m1 offset-m3"><i onClick="home();" class="menub material-icons">home</i></div>
             <div class="col center s2 m1"><i class="menub material-icons" onClick="info(0);">info_outline</i></div>
-            <div class="col center s4 m2"><span id="nivel" >Nivel 1</span></div>
+            <div class="col center s4 m2"><span id="level" >Nivel 1</span></div>
             <div class="col center s2 m1"><i class="menub material-icons" id="switch_sound" onClick="switch_sound();">volume_up</i> </div>
 			<div class="col center s2 m1"><i class="menub reset material-icons" onClick="reset_game();">loop</i></div>
           </div>
@@ -131,27 +157,28 @@
       <span class="close" onClick="close_modal();">&times;</span>
       <img class="modal-content" onClick="close_modal();" id="maximg">
       </div>
-	<audio id="s_hint">
-      <source src="audio/hint.mp3" preload="auto" type="audio/mp3">
-    </audio>
-    <audio id="s_corect">
-      <source src="audio/corect.mp3" preload="auto" type="audio/mp3"> 
-    </audio>
-    <audio id="s_incorect">
-      <source src="audio/incorect.mp3" preload="auto" type="audio/mp3">
-    </audio>
-    <audio id="s_ia_litera">
-      <source src="audio/ia_litera.mp3" preload="auto" type="audio/mp3">
-    </audio>
-    <audio id="s_pune_litera">
-      <source src="audio/pune_litera.mp3" preload="auto" type="audio/mp3">
-    </audio>
-    <audio id="s_ninja">
-      <source src="audio/ninja.mp3" preload="auto" type="audio/mp3">
-    </audio>
-    <audio id="s_switch">
-      <source src="audio/switch.mp3" preload="auto" type="audio/mp3">
-    </audio>
+	  
+      <audio id="s_hint">
+         <source src="audio/hint.mp3" preload="auto" type="audio/mp3">
+      </audio>
+      <audio id="s_correct">
+         <source src="audio/corect.mp3" preload="auto" type="audio/mp3">
+      </audio>
+      <audio id="s_incorrect">
+         <source src="audio/incorect.mp3" preload="auto" type="audio/mp3">
+      </audio>
+      <audio id="s_pull_letter">
+         <source src="audio/ia_litera.mp3" preload="auto" type="audio/mp3">
+      </audio>
+      <audio id="s_push_letter">
+         <source src="audio/pune_litera.mp3" preload="auto" type="audio/mp3">
+      </audio>
+      <audio id="s_ninja">
+         <source src="audio/ninja.mp3" preload="auto" type="audio/mp3">
+      </audio>
+      <audio id="s_switch">
+         <source src="audio/switch.mp3" preload="auto" type="audio/mp3">
+      </audio> 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163030951-1"></script>
@@ -165,6 +192,6 @@
   <!-- End Google Analytics -->
  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
  <script src="js/materialize.min.js"></script>
- <script src="js/game.js?ver=03062020F"></script>
+ <script src="js/game.js?ver=23072020"></script>
  </body>
 </html>

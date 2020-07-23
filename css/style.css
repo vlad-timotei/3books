@@ -12,28 +12,33 @@ h1,
 	display: block;
 }
 
-.mb10 {
-	margin-bottom: 10px;
-}
-
 .mb20 {
 	margin-bottom: 20px;
 }
 
-.mb0 {
-    margin-bottom: 0px;
+.mb10 {
+	margin-bottom: 10px;
 }
 
-.mt0 {
-    margin-top: 0px;
+.mb0 {
+	margin-bottom: 0px;
 }
 
 #startgame {
 	display: block;
 }
 
+.titlu-joc {
+	font-size: 4em;
+}
+
+.decoration {
+	width: 35px;
+	margin-bottom: 7px;
+}
+
 .fb {
-	max-width: 200px;
+	max-width: 100px;
 	margin: 0px auto;
 	display: block;
 }
@@ -50,21 +55,71 @@ h1,
 	background-color: rgb(13, 71, 161);
 }
 
-.modactiv {
+.nl {
+	font-size: 1.54em;
+	font-weight: 300;
+}
+
+#nume-participant {
+	min-width: 160px;
+	width: 20%;
+	text-align: center;
+}
+
+#alertme {
 	color: #C62828;
 }
 
-#definitie {
-    font-weight: 700;
-    width: 90%;
-    margin: 0px auto 30px;
-  
+.modactiv {
+	color: #2882c6;
 }
 
-.cine-sunt {
-    font-weight: 700;
-    
+.clasament-title {
+	font-size: 1.25em;
+	color: #0d47a1;
 }
+
+.clasn {
+	text-align: left;
+}
+
+.clasp {
+	text-align: left;
+}
+
+#clasament {
+	width: 30%;
+	min-width: 325px;
+	margin: auto;
+	font-size: 1.2em;
+	font-weight: 100;
+}
+
+#clasament-complet {
+	margin: auto;
+	font-size: 1.2em;
+	font-weight: 100;
+}
+
+#clasament .row,
+#clasament-complet .row,
+#clasament-final .row {
+	margin-bottom: 3px;
+}
+
+#clasament .row .col,
+#clasament-complet .row .col,
+#clasament-final .row .col,
+{
+	padding: 0 5px;
+}
+
+.link-clasament {
+	cursor: pointer;
+	color: #0d47a1;
+	font-size: 0.9em;
+}
+
 .clue {
 	margin: 0px auto;
 	display: block;
@@ -75,82 +130,94 @@ h1,
 	-webkit-box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
 	-moz-box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
 	box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
-    	cursor: pointer;
+	cursor: pointer;
 }
 
-
-
 .modalthing {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  /*background-color: rgb(0,0,0); /* Fallback color */
-  /*background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	/*background-color: rgb(0,0,0); /* Fallback color */
+	/*background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
 }
 
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 90%;
-  max-width: 450px;
-  cursor: pointer;
-  
-    border: solid 2px #17326f;
+	margin: auto;
+	display: block;
+	width: 90%;
+	max-width: 450px;
+	cursor: pointer;
+	border: solid 2px #17326f;
 	border-radius: 5px;
 	-webkit-box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
 	-moz-box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
 	box-shadow: 3px 2px 19px 0px rgba(0, 0, 0, 0.53);
-	
 }
 
-.modal-content {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+.modal-content {
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+	from {
+		-webkit-transform: scale(0)
+	}
+	to {
+		-webkit-transform: scale(1)
+	}
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+	from {
+		transform: scale(0)
+	}
+	to {
+		transform: scale(1)
+	}
 }
 
 .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #17326f;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #17326f;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
-  color: #2d60d2;
-  text-decoration: none;
-  cursor: pointer;
+	color: #2d60d2;
+	text-decoration: none;
+	cursor: pointer;
 }
 
-@media only screen and (max-width: 800px){
-  .modal-content {
-    width: 100%;
-  }
+@media only screen and (max-width: 800px) {
+	.modal-content {
+		width: 100%;
+	}
 }
-
-
-
+.whoami {
+    font-weight: 700;
+    
+}
 #incercare {
 	margin: 0px !important;
 	line-height: 100% !important;
@@ -164,10 +231,9 @@ h1,
 	color: green;
 }
 
-.mesajindiciu{
+.mesajindiciu {
 	cursor: pointer;
 }
-
 
 .letter {
 	margin-bottom: 10px;
@@ -186,10 +252,17 @@ h1,
 	margin-right: 15px;
 }
 
-.reset {color: #90949a57; cursor:default;}
-.resetactiv {color:#90949a; cursor: pointer; }
+.reset {
+	color: #90949a57;
+	cursor: default;
+}
 
-#nivel {
+.resetactiv {
+	color: #90949a;
+	cursor: pointer;
+}
+
+#level {
 	box-shadow: inset 0px 0px 15px 3px #0d47a1;
 	background: linear-gradient(to bottom, #0d47a1 5%, #415989 100%);
 	background-color: #2e466e;
