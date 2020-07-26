@@ -530,7 +530,8 @@ function check_player() {
     key_game=getval(game+"_key");
     if(key_game==0) generate_key();
     else key_game_arr=key_game.split(",");
-    preload_home_and_next_images();
+    preload_current_images();
+	preload_next_images();
     if (player.name != 0) {
         $("#noname").hide();
         $("#salut").html(", " + player.name);
@@ -542,19 +543,19 @@ function check_player() {
     }
 }
 
-function preload_home_and_next_images(){
+function preload_current_images(){
 	var currentlevel = levels[key_game_arr[player.level]].split('|', 4);
-    var nextlevel = levels[key_game_arr[parseInt(player.level)+1]].split('|', 4);
-    var imgs=currentlevel[1]+","+currentlevel[2]+","+nextlevel[1]+","+nextlevel[2];
-	var imgs_url = imgs.split(',', 4);
+	var imgs_url = currentlevel[1].imgs.split(',', 4);
     preload_imgs(imgs_url);
 }
 
 function preload_next_images(){
-	var nextlevel = levels[key_game_arr[parseInt(player.level)+1]].split('|', 4);
-    var imgs=nextlevel[1]+","+nextlevel[2];
-	var imgs_url = imgs.split(',', 2);
-    preload_imgs(imgs_url);
+	if(player.level < (levels.length - 1)) {
+		var nextlevel = levels[key_game_arr[parseInt(player.level)+1]].split('|', 4);
+		var imgs=nextlevel[1]+","+nextlevel[2];
+		var imgs_url = imgs.split(',', 2);
+		preload_imgs(imgs_url);
+	}
 }
 
 function preload_imgs(imgs){
@@ -563,6 +564,9 @@ function preload_imgs(imgs){
 		preloaded_imgs[i].src = "images/"+imgs[i]+".jpg";
 	}
 }
+
+
+
 
 function setval(cname, cvalue) {
     setLS(cname, cvalue);
