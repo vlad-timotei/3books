@@ -545,8 +545,9 @@ function check_player() {
 
 function preload_current_images(){
 	var currentlevel = levels[key_game_arr[player.level]].split('|', 4);
-	var imgs_url = currentlevel[1].imgs.split(',', 4);
-    preload_imgs(imgs_url);
+	var imgs=currentlevel[1]+","+currentlevel[2];
+	var imgs_url = imgs.split(',', 2);
+	preload_imgs(imgs_url);
 }
 
 function preload_next_images(){
