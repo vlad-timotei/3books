@@ -55,8 +55,9 @@ Explorator pasionat de provocări și de minunile naturii.
 - version info added
 - use LocalStorage instead of Cookies
 - modal full screen images
-- all images are now free stock images
+- all images are now free royal images
 - generate random custom key game for each player
+- 61 levels
 
 <i> ver 2.5 </i> @ 07.2020
 
