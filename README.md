@@ -56,6 +56,7 @@ Explorator pasionat de provocări și de minunile naturii.
 - use LocalStorage instead of Cookies
 - modal full screen images
 - all images are now free stock images
+- generate random custom key game for each player
 
 <i> ver 2.5 </i> @ 07.2020
 
