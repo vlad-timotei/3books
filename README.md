@@ -28,12 +28,42 @@ Explorator pasionat de provocări și de minunile naturii.
 <hr>
 
 <i> Probleme cunoscute </i>
+1. Efectele sonore din aceeași categorie rulează doar dacă efectul sonor precedent s-a terminat.  
+2. Literele din soluție trec pe 2 rânduri atunci când cuvantul are 9 sau mai multe litere
+3. La fiecare reincarcare a jocului, literele pentru un anumit nivel se schimba; prin metoda excluderii, se pot afla literele corecte
+4. Solutia poate fi aflata din sursa codului sau prin injectare js in bara de adresa
+5. Chrome cere favicon.ico la fiecare efect sonor
+6. Cartile 1 și 2 Tesaloniceni apar doar ca o singura carte cu numele de Tesaloniceni
+7. Apocalipsa, Geneza, Cantarea Cantarilor si Plangerile lui Ieremia nu sunt
 
+# Changelog
 
-0. 1 și 2 Tesaloniceni = Tesaloniceni
-1. Apocalipsa lipsesc
-2. Geneza, Cantarea Cantarilor si Plangerile lui Ieremia nu sunt
-3. La apăsarea foarte rapidă a comenzilor, efectele audio pot să nu mai ruleze.  
-4. Literele din soluție trec pe 2 rânduri atunci când cuvantul are 9 sau mai multe litere
-5. La fiecare reincarcare a jocului, literele pentru un anumit nivel se schimba; prin metoda excluderii, se pot afla literele corecte
-6. Solutia poate fi aflata din sursa codului sau prin injectare js in bara de adresa
+<i> ver 1.0 </i> @ 2017
+- church project
+- plain html design
+- sets of OT and NT books in multiple smaller games
+
+<i> ver 2.0 </i> @ 06.2020
+- funbible.net project
+- modern responsive design 
+- inbuild browser compatibility
+- difficiculty modes
+- hint added
+- sound effects
+- score added
+- stats added
+- version info added
+- use LocalStorage instead of Cookies
+- modal full screen images
+- all images are now free stock images
+
+<i> ver 2.5 </i> @ 07.2020
+
+- ranking name system
+- name of the player required
+- code rewritten to be object orientated
+- preload images
+- privacy policy added
+- custom motivational message
+- optimised server requests
+
