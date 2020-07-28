@@ -119,7 +119,7 @@ function hide_definition(t) {
 }
 
 function fill_definition(t) {
-    $('#definition').html("Sunt o carte din " + level.definition + " și am pe lângă mine pe").fadeIn(t);
+    $('#definition').html("Sunt o carte din " + level.definition + " <br/>și am lângă mine pe").fadeIn(t);
 }
 
 function fill_btns(whatmode) {
@@ -220,7 +220,7 @@ function display_message(t, type) {
     if (type == 1)
         $('#definition').html("<b class='succes'>Felicitări, " + player.name + "!</b> Scorul tău: <b>" + player.totalscore + "</b>").fadeIn(t);
     else
-        $("#definition").html("<b class='error'>Mai încearcă!</b>").fadeIn(t);
+        $("#definition").html("<b class='error'>Mai încearcă!<br/>&nbsp;</b>").fadeIn(t);
 }
 
 function reset_game() {
