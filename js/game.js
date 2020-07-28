@@ -218,7 +218,7 @@ function check_player_try() {
 
 function display_message(t, type) {
     if (type == 1)
-        $('#definition').html("<b class='succes'>Felicitări, " + player.name + "!</b> Scorul tău: <b>" + player.totalscore + "</b>").fadeIn(t);
+        $('#definition').html("<b class='succes'>Felicitări, " + player.name + "!</b><br/> Scorul tău: <b>" + player.totalscore + "</b>").fadeIn(t);
     else
         $("#definition").html("<b class='error'>Mai încearcă!<br/>&nbsp;</b>").fadeIn(t);
 }
