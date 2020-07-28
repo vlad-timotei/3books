@@ -60,6 +60,10 @@ h1,
 	font-weight: 300;
 }
 
+[type="checkbox"] + span:not(.lever) {
+  padding-left: 25px;
+}
+
 #nume-participant {
 	min-width: 160px;
 	width: 20%;

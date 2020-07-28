@@ -1,4 +1,4 @@
-// Un joc creat de Vlad Timotei ver.2.5@24.07.2020
+// Un joc creat de Vlad Timotei ver.2.5@28.07.2020
 var game = "3carti_03062020F";
 var level = {}; // solution, solution_lenght, try_lenght, completed, definition, buttons_nr, timeforaudiohint, timeoforhint
 var player = {}; // name, level, mode, startofgame, endofgame, timpepergame, scorpergame, totalscore, usedclue, tries, clue_coef, sound, olduser
@@ -119,7 +119,7 @@ function hide_definition(t) {
 }
 
 function fill_definition(t) {
-    $('#definition').html("Sunt un " + level.definition + "! Găsește-mă!").fadeIn(t);
+    $('#definition').html("Sunt o carte din " + level.definition + " și am pe lângă mine pe").fadeIn(t);
 }
 
 function fill_btns(whatmode) {
@@ -390,6 +390,11 @@ function get_player_name() {
             $("#alertme").html("Introdu numele mai întâi!<br/>");
             return 0;
         }
+		if(!document.getElementById("termsandconditions").checked){
+			$("#alertme").html("Acceptă Politica de confidențialitate!</i><br/>");
+			return 0;
+		}
+        else setval(game+"_acceptedterms","yes");
         if (player.olduser)
             var param = {
                 "name": playernameinput,
