@@ -579,7 +579,8 @@ function fill_img_nok(){ document.getElementById("clue1").src="images/"+clues[1]
   
 
 function fill_definition(t) {
-    $('#definition').html(textdb[player.language]['iama'] + " " + level.definition + "! " + textdb[player.language]['findme']).fadeIn(t);
+    $('#definition').html(textdb[player.language]['iama'] + " " + level.definition +" "+textdb[player.language]['andihave']).fadeIn(t);
+	
 }
 /*onLevelClick functions --- touch();*/
 function touch(l) {
@@ -755,7 +756,8 @@ function newGame() {
 /*DB*/
 textdb = [
 {'level':'Nivel',
- 'iama':'Sunt un',
+ 'iama':'Sunt o carte din',
+ 'andihave': 'și am pe lângă mine pe:',
  'findme':'Cine sunt?',
  'congrats':'Felicitări',
  'yourscore':'Scorul tău',
@@ -776,6 +778,7 @@ textdb = [
 },
 {'level':'Level',
  'iama':'I am a',
+ 'andihave': 'and around me I have these:',
  'findme':'Who am I?',
  'congrats':'Congrats',
  'yourscore':'Your score',
