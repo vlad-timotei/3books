@@ -211,27 +211,30 @@ function put_ranking(whattype) {
 }
 
 function preload_current_images(){
-	var currentlevel = levels[key_game_arr[player.level]].split('|', 4);
+	if(player.level < (levels[player.language].length)) {
+	var currentlevel = levels[player.language][key_game_arr[player.level]].split('|', 4);
 	var imgs=currentlevel[1]+","+currentlevel[2];
 	var imgs_url = imgs.split(',', 2);
 	preload_imgs(imgs_url);
-}
+}}
 
 function preload_next_images(){
-	if(player.level < (levels.length - 1)) {
-		var nextlevel = levels[key_game_arr[parseInt(player.level)+1]].split('|', 4);
+	if(player.level < (levels[player.language].length - 1)) {
+		var nextlevel = levels[player.language][parseInt(player.level) + 1].split('|', 4);
 		var imgs=nextlevel[1]+","+nextlevel[2];
 		var imgs_url = imgs.split(',', 2);
 		preload_imgs(imgs_url);
 	}
 }
 
-function preload_imgs(imgs){
-	for (var i = 0; i < imgs.length; i++) {
-		preloaded_imgs[i] = new Image();
-		preloaded_imgs[i].src = "images/"+imgs[i]+".jpg";
-	}
+function preload_imgs(imgs) {
+    for(var i = 0; i < imgs.length; i++) {
+        preloaded_imgs[i] = new Image();
+        preloaded_imgs[i].src = "images/" + imgs[i] + ".jpg";
+    }
 }
+
+
 
 function load_game_events() {
     $("#mode").change(change_mode);
