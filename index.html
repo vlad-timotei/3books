@@ -16,100 +16,155 @@
     <meta property="og:locale" content="ro_RO">
     <meta property="keywords" content="jocuri biblice,jocuri crestine,activitati crestine,activitati biblice,pagini de colorat biblice,pagini de colorat crestine,jocuri de sabat,activitati de sabat,desene biblice,desene de sabat,desene crestine">
     <link rel="icon" type="image/x-icon" href="https://funbible.net/favicon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <style>.invisible, .lang-en {display: none;}</style>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css?ver=28072020" type="text/css" rel="stylesheet" media="all" />
   </head>
   <body>
-    <!--START - Connection to FunBible.net-->
-    <a href="https://funbible.net/activities/" class="back-link">
-      <button class="orange-button">
-        <svg role="img" aria-hidden="true" width="20" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg>
-      </button>
-      <img src="https://funbible.net/assets/logo.svg" height="60" />
-    </a>
-    <!--END - Connection to FunBible.net-->
-  <div class="section no-pad-bot" id="startgame">
+     <a href="https://funbible.net/activities/" class="back-link">
+         <button class="orange-button">
+            <svg role="img" aria-hidden="true" width="20" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+               <path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path>
+            </svg>
+         </button>
+         <img src="https://funbible.net/assets/logo.svg" height="60" />
+      </a>
+	<div class="section no-pad-bot invisible" id="startgame">
          <div class="container">
-            <h1 class="header center red-text text-darken-4">3 Cărți</h1>
+            <h1 class="header titlu-joc center blue-text text-darken-4 lang-ro">Trei Cărți</h1>
+            <h1 class="header titlu-joc center blue-text text-darken-4 lang-en">Three Books</h1>
             <div class="row center mb0">
-               <h5 class="header col s12 m6 offset-m3 light mb20">Bine ai venit<span id="salut"></span>! Cărțile Bibliei s-au amestecat și au nevoie de ajutorul tău să se așeze în ordine. Află cartea și apoi selectează literele în ordine!</h5>
+               <h5 class="header col s12 m6 offset-m3 light mb20">
+                  <span class="lang-ro">Bine ai venit</span><span class="lang-en">Welcome</span><span id="salut"></span>! 
+                  <span class="lang-ro">Cărțile Bibliei s-au amestecat și au nevoie de ajutorul tău să se așeze în ordine. Află cartea și apoi selectează literele în ordine!</span>
+                  <span class="lang-en">Bible books are mixed and need your help to... Find the book and then select the letters, in order to form the word!</span>
+               </h5>
             </div>
             <div class="row center mb0">
-                <div id="noname" class="mb10"><span id="alertme"></span><span class="nl">Numele tău: </span><br/><input type="text" placeholder="Scrie numele tău aici" name="nume-participant" id="nume-participant" ><br/>
-			    <label><input id="termsandconditions" type="checkbox" /><span>Am citit și sunt de acord cu <br/><i><a class="grey-text" href="https://docs.google.com/document/d/1JL21qeYWquP3HaMKV6k0TNsNJVEp2imjdsqUedLjriw/edit?usp=sharing" target="_new">Politica de confidențialitate</a>&nbsp; &nbsp; &nbsp;</i>
-				</span></label>
-				</div>
-				<a class="btn-large waves-effect waves-light green darken-2 start mb20" onclick="start(1);" id="startlevel">Începe</a><br/>
-               <div class="switch" ><label><span id="easy">Mod ușor</span><input type="checkbox" id="mode"><span class="lever"></span><span id="hard">Mod avansat</span></label></div>
+               <div id="noname" class="mb10">
+                  <span id="alertme"></span>
+                  <span class="nl lang-ro">Numele tău: </span>
+                  <span class="nl lang-en">Your name: </span>
+                  <br/><input type="text" placeholder="..." name="nume-participant" id="nume-participant" ><br/>
+                  <label><input id="termsandconditions" type="checkbox" />
+                  <span><span class="lang-ro">Am citit și sunt de acord cu <br/><i><a class="grey-text" href="https://docs.google.com/document/d/1JL21qeYWquP3HaMKV6k0TNsNJVEp2imjdsqUedLjriw/edit?usp=sharing" target="_new">Politica de confidențialitate</a>&nbsp; &nbsp; &nbsp;</i></span>
+                  <span class="lang-en">I read and I agree with the<br/><i><a class="grey-text" href="https://docs.google.com/document/d/1JL21qeYWquP3HaMKV6k0TNsNJVEp2imjdsqUedLjriw/edit?usp=sharing" target="_new">Privacy Policy</a>&nbsp; &nbsp; &nbsp;</i></span>
+                  </span>
+                  </label>
+               </div>
+               <a class="btn-large waves-effect waves-light green darken-2 start mb20"  id="startlevel" onClick="start(1);">Începe</a><br/>
+               <div class="switch" >
+                  <label>
+                  <span class="easy lang-ro">Mod ușor</span>
+                  <span class="easy lang-en">Easy mode</span>
+                  <input type="checkbox" id="mode">
+                  <span class="lever"></span>
+                  <span class="hard lang-ro">Mod avansat</span>
+                  <span class="hard lang-en">Advanced mode</span>
+                  </label>
+               </div>
                <br/>
             </div>
             <div class="row center">
-               <b class="clasament-title">Clasament</b>
+               <b class="clasament-title"><span class="lang-ro">Clasament</span><span class="lang-en">Ranking</span></b>
                <br/>
                <div id="clasament">
                </div>
-               <br/>
-               <img src="https://funbible.net/assets/o-yellow.png" class="decoration"><img src="https://funbible.net/assets/x-pink.png" class="decoration"> <img src="https://funbible.net/assets/o-blue.png" class="decoration"><br/>
+            </div>
+            <div class="row s12 center">
+               <div class="col s4 offset-s4">
+                  <img class="lang-ro" alt="Schimbă în engleză!" src="images/en-flag.png" id="changetoen" onClick="change_language('en');">
+                  <span class="lang-ro change_language" onClick="change_language('en');"><br/>English</span>
+                  <img class="lang-en" alt="Change in romanian!" id="changetoro" src="images/ro-flag.png" onClick="change_language('ro');">
+                  <span class="lang-en change_language" onClick="change_language('ro');"><br/>Română</span>
+               </div>
             </div>
          </div>
       </div>
-    <div class="invisible section no-pad-bot" id="info">
-      <div class="container">
-        <h1 class="header center red-text text-darken-4">Trei cărți</h1>
-        <div class="row">
-          <div class="col s12 light m6 offset-m3">
-		   <i class="center cent"> versiunea <b>2.5</b></i>
-            <ul class="instructiuni">
-			 
-              <li><i class="instr_ico material-icons">lightbulb_outline</i>Privește cele două imagini și încearcă să-ți amintești, fără să te uiți în Biblie, ce carte se află între cele două cărți afișate. Citește și indiciul aflat deasupra imaginilor, care îți spune din ce parte a Bibliei este! Când găsești soluția apasă, pe rând, literele colorate. </li>
-              <li><i class="instr_ico material-icons">loop</i> Dacă ai apăsat greșit pe o literă, apasă din nou pe ea și aceasta se va șterge. Poți șterge tot ce ai introdus apăsând pe butonul de resetare. </li>
-              <li><i class="instr_ico material-icons">error_outline</i> Dacă introduci o soluție incorectă, te voi ruga să încerci din nou. Dacă ți se pare prea greu, apasă pe butonul <i  class="home material-icons">home</i> și selectează modul de joc ușor, în care primești indiciul mai devreme, iar literele sunt mai puține și ordonate alfabetic. </li>
-              <li><i class="instr_ico material-icons">help</i>După o încercare sau două, ți se va oferi posibilitatea de a primi ca indiciu prima literă a cuvântului</li>
-       		  <li><i class="instr_ico material-icons">assignment_turned_in</i> Dacă introduci soluția corectă, avansezi la următorul nivel. </li>
-              <li><b>Succes!</b></li>
-			 <br/>
-			  <li><i>Sursele imaginilor din acest proiect pot fi consultate <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS4AMLdDuOoTNoptCtqdrY4BcIaPlrwTnh_qblgKGYXBwUqoVGIvP82v8YSSOcWsuTu5W5bDebCwgrv/pubhtml?gid=348971332&single=true">aici</a>. Citește despre politica de confidențialitate și utilizarea cookie-urilor <a href="https://docs.google.com/document/d/1JL21qeYWquP3HaMKV6k0TNsNJVEp2imjdsqUedLjriw/edit?usp=sharing" target="_new">aici</a>. </i></li>
-           </ul>
-          </div>
-        </div>
-        <div class="row center">
-          <a   class="btn-large waves-effect waves-light yellow darken-3 start" onclick="info(1);" >Înapoi la joc</a>
-        </div>
-      </div>
-    </div>
-	 <div class="invisible section no-pad-bot" id="rankingpage">
+      <div class="invisible section no-pad-bot" id="info">
          <div class="container">
-            <h1 class="header center blue-text text-darken-4 titlu-joc">Clasament</h1>
+            <h1 class="header center blue-text text-darken-4"><span class="lang-ro">Trei cărți</span><span class="lang-en">Three books</span></h1>
+            <div class="row lang-ro">
+               <div class="col s12 light m6 offset-m3">
+                  <i class="center cent"> versiunea <b>3.0</b> în romănă și engleză</i>
+                  <ul class="instructiuni">
+                    <li><i class="instr_ico material-icons">lightbulb_outline</i>Privește cele două imagini și încearcă să-ți amintești, fără să te uiți în Biblie, ce carte se află între cele două cărți afișate. Citește și indiciul aflat deasupra imaginilor, care îți spune din ce parte a Bibliei este! Când găsești soluția apasă, pe rând, literele colorate. </li>
+					<li><i class="instr_ico material-icons">loop</i> Dacă ai apăsat greșit pe o literă, apasă din nou pe ea și aceasta se va șterge. Poți șterge tot ce ai introdus apăsând pe butonul de resetare. </li>
+					<li><i class="instr_ico material-icons">error_outline</i> Dacă introduci o soluție incorectă, te voi ruga să încerci din nou. Dacă ți se pare prea greu, apasă pe butonul <i  class="home material-icons">home</i> și selectează modul de joc ușor, în care primești indiciul mai devreme, iar literele sunt mai puține și ordonate alfabetic. </li>
+					<li><i class="instr_ico material-icons">help</i>După o încercare sau două, ți se va oferi posibilitatea de a primi ca indiciu prima literă a cuvântului</li>
+					<li><i class="instr_ico material-icons">assignment_turned_in</i> Dacă introduci soluția corectă, avansezi la următorul nivel. </li>
+					<li><b>Succes!</b></li>
+                     <br/>
+                     <li><i>Sursele imaginilor din acest proiect pot fi consultate <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS4AMLdDuOoTNoptCtqdrY4BcIaPlrwTnh_qblgKGYXBwUqoVGIvP82v8YSSOcWsuTu5W5bDebCwgrv/pubhtml?gid=1539825106&single=true" target="_new">aici</a>. Citește despre politica de confidențialitate și utilizarea cookie-urilor <a href="https://docs.google.com/document/d/1JL21qeYWquP3HaMKV6k0TNsNJVEp2imjdsqUedLjriw/edit?usp=sharing" target="_new">aici</a>. </i></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="row lang-en">
+               <div class="col s12 light m6 offset-m3">
+                  <i class="center cent"> version <b>3.0</b> in romanian and english.</i>
+                  <ul class="instructiuni">
+                     <li><i class="instr_ico material-icons">lightbulb_outline</i> Watch carefully both images and try to remember, without checking in the Bible, what book is in between. Also, note the clue above! When you find the solution, click on the colored letters, one by one, in the correct order. </li>
+                     <li><i class="instr_ico material-icons">loop</i>If you accidentally clicked a letter, click it again and it will be erased. You can also delete everything you typed by clicking the reset button.</li>
+                     <li><i class="instr_ico material-icons">error_outline</i>If your solution is incorrect, you will have to try again. If you think that's too difficult, click on  <i  class="home material-icons">home</i> and select the easy game mode - you will get the clue sooner and the letters are alphabetically ordered.</li>
+                     <li><i class="instr_ico material-icons">help</i>After a guess or two, depending on the game mode, you will be able to get a clue - the first letter of the word.</li>
+                     <li><i class="instr_ico material-icons">assignment_turned_in</i>After you enter the correct solution you go to the next level. </li>
+                     <li><b>Good luck!</b></li>
+                     <br/>
+                     <li><i>The images sources used in this game can be accessed <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS4AMLdDuOoTNoptCtqdrY4BcIaPlrwTnh_qblgKGYXBwUqoVGIvP82v8YSSOcWsuTu5W5bDebCwgrv/pubhtml?gid=1539825106&single=true" target="_new">here</a>. Read about our Privacy Policy and Cookie Usage <a href="https://docs.google.com/document/d/1JL21qeYWquP3HaMKV6k0TNsNJVEp2imjdsqUedLjriw/edit?usp=sharing" target="_new">here</a> (romanian version). </i></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="row center">
+               <a class="btn-large waves-effect waves-light green darken-1 start" id="closeinfo" onClick="info(1);" ><span class="lang-ro">Înapoi la joc</span><span class="lang-en">Back to game</span></a>
+            </div>
+         </div>
+      </div>
+	   <div class="invisible section no-pad-bot" id="rankingpage">
+         <div class="container">
+            <h1 class="header center blue-text text-darken-4 titlu-joc lang-ro">Clasament</h1>
+            <h1 class="header center blue-text text-darken-4 titlu-joc lang-en">Ranking</h1>
             <div class="row">
                <div class="col s12 light m6 offset-m3">
                   <div id="clasament-complet">
                   </div>
                   <br/>
-                  <h3 class="clasament-title cent center" id="lasttofthem"><span id="lastofthem" class="invisible" >Nu te descuraja dacă nu ești printre primii! Vei ajunge curând!</span>
-				  <span id="firstofthem" class="invisible">Felicitări! Ești printre primii jucători! Ține-o tot așa!</span></h3>
+                  <h3 class="clasament-title cent center" id="lasttofthem"><span id="lastofthem" class="invisible" >
+                     <span class="lang-ro">Nu te descuraja! Poți ajunge printre primii</span>
+                     <span class="lang-en">Don't worry! Keep playing and you'll get in the top!</span>
+                     </span>
+                     <span id="firstofthem" class="invisible">
+                     <span class="lang-ro">Felicitări! Ești printre primii jucători! Ține-o tot așa!</span>
+                     <span class="lang-en">Congratulations! You are awesome! Keep it that way!</span>
+                     </span>
+                  </h3>
                </div>
             </div>
             <div class="row center">
-               <a   class="btn-large waves-effect waves-light green darken-1 start" onclick="ranking_page(1);" >Înapoi acasă</a>
+               <a   class="btn-large waves-effect waves-light green darken-1 start" id="closeranking" onClick="ranking_page(1);" ><span class="lang-ro">Înapoi acasă</span><span class="lang-en">Back home</span></a>
             </div>
          </div>
-      </div>	
-    <div class="invisible section no-pad-bot" id="endgame">
-      <div class="container">
-        <h1 class="header center red-text text-darken-4">Felicitări</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Ai terminat toate nivelurile acestui joc cu un scor total de <b id="scor_total">100</b> puncte! <br/> Poți începe din nou, dar numele și scorul se vor reseta!</h5>
-        </div>
-        <div class="row center">
-          <a   class="btn-large waves-effect waves-light yellow darken-3 start" onclick="newGame()"; >Începe din nou!</a>
-        </div>
       </div>
-    </div>
+	   <div class="invisible section no-pad-bot" id="endgame">
+         <div class="container">
+            <h3 class="header center blue-text text-darken-4" id="finalcongrats"><span class="lang-ro">Felicitări, </span><span class="lang-en">Congrats, </span></h3>
+            <h2 id="finalcongrats-name" class="center blue-text text-darken-4"></h2>
+            <div class="row center">
+               <h5 class="header col s12 light"><span class="lang-ro">Ai terminat toate nivelurile acestui joc cu un scor total de</span><span class="lang-en">You completed all levels with a total score of</span> <b id="scor_total">100</b> puncte! <br/><br/><span class="lang-ro">Poți începe din nou, dar scorul și numele se vor reseta.</span><span  class="lang-en">You can start again, but your score and name will reset! </span></h5>
+               <b class="clasament-title"><span class="lang-ro">Clasament</span><span class="lang-en">Ranking</span></b>
+               <br/>
+               <div id="clasament-final">
+               </div>
+            </div>
+            <div class="row center">
+               <a   class="btn-large waves-effect waves-light green darken-1 start" id="newgame" onClick="newGame();" ><span class="lang-ro">Resetează jocul!</span><span class="lang-en">Reset the game!</span></a>
+            </div>
+         </div>
+      </div>
     <div class="invisible container" id="game">
       <div class="section">
-          <h5 class="center blue-text text-darken-4 mb20" id="definition" >Sunt o carte din Biblie și am pe lângă mine pe</h5>
+          <h5 class="center blue-text text-darken-4 mb20" id="definition" ></h5>
         <div class="row">
           <div class="col s6 m3 offset-m3">
             <img src="" id="clue1" onClick="open_modal(this.src);" class="clue c1" />
@@ -118,46 +173,52 @@
             <img src="" id="clue2"  onClick="open_modal(this.src);" class="clue c2" />
           </div>
         </div>
-        <div id="resetable">
-          <div class="row">
-            <div class="col s12">
-               <h5 class="center mb0 mt0 red-text text-darken-4 whoami" >Cine sunt?</h5>
-              <h2 class="center" id="usertry" >_ _ _ _ _ _</h2>
+        <!--
+		
+		
+		
+		
+		
+		-->
+		<div id="resetable">
+               <div class="row">
+                  <div class="col s12">
+                     <h6 class="center" id="definition" ></h6>
+                     <h2 class="center" id="usertry" ></h2>
+                  </div>
+               </div>
+               <div class="row" id="litere_posibile">
+                  <div id="he1" class="col s3 m1 letter "><a class="btn-floating btn-large waves-effect waves-light red darken-4 cent " id="1" onclick="touch(1);"></a></div>
+                  <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light blue darken-4 cent " id="2" onclick="touch(2);"></a></div>
+                  <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light teal lighten-2 cent " id="3" onclick="touch(3);"></a></div>
+                  <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light yellow darken-3 cent " id="4" onclick="touch(4);"></a></div>
+                  <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light light-blue darken-1 cent " id="5" onclick="touch(5);"></a></div>
+                  <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light red darken-4 cent " id="6" onclick="touch(6);"></a></div>
+                  <div id="e2" class="col s3 m1 letter "><a class="btn-floating btn-large waves-effect waves-light blue darken-4 cent " id="7" onclick="touch(7);"></a></div>
+                  <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light teal lighten-2 cent " id="8" onclick="touch(8);"></a></div>
+                  <div id="h2" class="col s3 m1 letter "><a class="btn-floating btn-large waves-effect waves-light yellow darken-3 cent " id="9" onclick="touch(9);"></a></div>
+                  <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light light-blue darken-1 cent " id="10" onclick="touch(10);"></a></div>
+                  <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light red darken-4 cent " id="11" onclick="touch(11);"></a></div>
+                  <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light blue darken-4 cent " id="12" onclick="touch(12);"></a></div>
+                  <div class="hard-letter col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light teal lighten-2 cent " id="13" onclick="touch(13);"></a></div>
+                  <div class=" hard-letter col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light yellow darken-3 cent " id="14" onclick="touch(14);"></a></div>
+                  <div class="hard-letter col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light light-blue darken-1 cent " id="15" onclick="touch(15);"></a></div>
+                  <div class="hard-letter col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light red darken-4 cent " id="16" onclick="touch(16);"></a></div>
+               </div>
+               <div class="row">
+                  <div class="col center s2 m1 offset-m3"><i onClick="home();" class="menub material-icons">home</i></div>
+                  <div class="col center s2 m1"><i class="menub material-icons" onClick="info(0);">info_outline</i></div>
+                  <div class="col center s4 m2"><span id="level" ></span></div>
+                  <div class="col center s2 m1"><i class="menub material-icons" id="switch_sound" onClick="switch_sound();">volume_up</i> </div>
+                  <div class="col center s2 m1"><i class="menub reset material-icons" onClick="reset_game();">loop</i></div>
+               </div>
             </div>
-          </div>
-          <div class="row" id="litere_posibile">
-            <div id="he1" class="col s3 m1 letter "><a class="btn-floating btn-large waves-effect waves-light red darken-4 cent " id="1" onclick="touch(1);">A</a></div>
-            <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light blue darken-4 cent " id="2" onclick="touch(2);">A</a></div>
-            <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light teal lighten-2 cent " id="3" onclick="touch(3);">C</a></div>
-            <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light yellow darken-3 cent " id="4" onclick="touch(4);">A</a></div>
-            <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light light-blue darken-1 cent " id="5" onclick="touch(5);">A</a></div>
-            <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light red darken-4 cent " id="6" onclick="touch(6);">A</a></div>
-            <div id="e2" class="col s3 m1 letter "><a class="btn-floating btn-large waves-effect waves-light blue darken-4 cent " id="7" onclick="touch(7);">A</a></div>
-            <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light teal lighten-2 cent " id="8" onclick="touch(8);">A</a></div>
-            <div id="h2" class="col s3 m1 letter "><a class="btn-floating btn-large waves-effect waves-light yellow darken-3 cent " id="9" onclick="touch(9);">A</a></div>
-            <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light light-blue darken-1 cent " id="10" onclick="touch(10);">A</a></div>
-            <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light red darken-4 cent " id="11" onclick="touch(11);">A</a></div>
-            <div class="col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light blue darken-4 cent " id="12" onclick="touch(12);">A</a></div>
-            <div class="hard-letter col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light teal lighten-2 cent " id="13" onclick="touch(13);">A</a></div>
-            <div class=" hard-letter col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light yellow darken-3 cent " id="14" onclick="touch(14);">A</a></div>
-            <div class="hard-letter col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light light-blue darken-1 cent " id="15" onclick="touch(15);">A</a></div>
-            <div class="hard-letter col s3 m1 letter"><a class="btn-floating btn-large waves-effect waves-light red darken-4 cent " id="16" onclick="touch(16);">A</a></div>
-          </div>
-          <div class="row">
-            <div class="col center s2 m1 offset-m3"><i onClick="home();" class="menub material-icons">home</i></div>
-            <div class="col center s2 m1"><i class="menub material-icons" onClick="info(0);">info_outline</i></div>
-            <div class="col center s4 m2"><span id="level" >Nivel 1</span></div>
-            <div class="col center s2 m1"><i class="menub material-icons" id="switch_sound" onClick="switch_sound();">volume_up</i> </div>
-			<div class="col center s2 m1"><i class="menub reset material-icons" onClick="reset_game();">loop</i></div>
-          </div>
-        </div>
       </div>
     </div>
     <div id="modal_area" class="modalthing" onClick="close_modal();">
       <span class="close" onClick="close_modal();">&times;</span>
       <img class="modal-content" onClick="close_modal();" id="maximg">
       </div>
-	  
       <audio id="s_hint">
          <source src="audio/hint.mp3" preload="auto" type="audio/mp3">
       </audio>
@@ -179,17 +240,14 @@
       <audio id="s_switch">
          <source src="audio/switch.mp3" preload="auto" type="audio/mp3">
       </audio> 
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163030951-1"></script>
   <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-163030951-1');
   </script>
-  <!-- End Google Analytics -->
  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
  <script src="js/materialize.min.js"></script>
  <script src="js/game.js?ver=28072020"></script>
