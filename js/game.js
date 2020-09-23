@@ -433,13 +433,11 @@ function gametime(moment) {
 
 function init() {
     var date = levels[player.language][key_game_arr[player.level]].split('|', 4);
-  
     level.solution=date[0];
 	clues[0]=date[1];
 	clues[1]=date[2];
 	level.definition=date[3];
     level.definition=textdb[player.language][level.definition];
-	else level.definition="Vechiul Testament"; 
 	level.completed = 0;
     level.solution_lenght = level.solution.length;
     level.try_lenght = 0;
