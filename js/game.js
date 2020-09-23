@@ -90,6 +90,9 @@ function check_player(first_check = 1) {
     check_level();
     if(first_check) get_ranking("short");
     player.olduser = 0;
+	key_game=getval(game+"_key");
+    if(key_game==0) generate_key();
+    else key_game_arr=key_game.split(",");
     preload_current_images();
     preload_next_images();
     if(player.name != 0) {
@@ -101,6 +104,20 @@ function check_player(first_check = 1) {
         $("#salut").html("");
     }
 }
+
+ function generate_key(){
+     key_NT_arr=shuffle(key_NT.split(","));
+     key_NT=key_NT_arr.join();
+     
+     key_VT_arr=shuffle(key_VT.split(","));
+     key_VT=key_VT_arr.join();
+     
+     key_game="0,"+key_NT+","+key_VT;
+     key_game_arr=key_game.split(",");
+     
+     setval(game+"_key",key_game);
+    
+   }
 
 function set_sound() {
     if(player.sound == "on") $("#switch_sound").html("volume_up");
