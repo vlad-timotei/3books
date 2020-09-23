@@ -438,7 +438,7 @@ function init() {
 	clues[0]=date[1];
 	clues[1]=date[2];
 	level.definition=date[3];
-    if(level.definition=="NT") level.definition="Noul Testament";
+    level.definition=textdb[player.language][level.definition];
 	else level.definition="Vechiul Testament"; 
 	level.completed = 0;
     level.solution_lenght = level.solution.length;
@@ -773,7 +773,9 @@ textdb = [
  'otherplayers':'alți jucători',
  'fullranking':'Vezi clasament',
  'game':'4 Imagini',
- 'placeholder':'Scrie numele tău aici'
+ 'placeholder':'Scrie numele tău aici',
+ 'NT':"Noul Testament",
+ 'VT':"Vechiul Testament"
  
 },
 {'level':'Level',
@@ -794,7 +796,9 @@ textdb = [
  'otherplayers':'other players',
  'fullranking':'Full ranking',
  'game': '4 Images',
- 'placeholder':'Put your name here'
+ 'placeholder':'Put your name here',
+ 'NT':"New Testament",
+ 'VT':"Old Testament"
 }
 ]
 
