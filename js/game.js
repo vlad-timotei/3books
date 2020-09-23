@@ -171,7 +171,7 @@ function get_ranking(whattype) {
         "type": whattype,
         "name": player.name
     };
-    var req = "https://vladtimotei.ro/scripts/3books/4img_ranking.php";
+    var req = "https://vladtimotei.ro/scripts/3books/3books_ranking.php";
     $.get(req, param, function(data) {
         ranking = data;
         put_ranking(whattype);
