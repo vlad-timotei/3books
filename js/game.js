@@ -579,7 +579,7 @@ function fill_img_nok(){ document.getElementById("clue1").src="images/"+clues[1]
   
 
 function fill_definition(t) {
-    $('#definition').html(textdb[player.language]['iama'] + " " + level.definition +" "+textdb[player.language]['andihave']).fadeIn(t);
+    $('#definition').html(textdb[player.language]['iama'] + " " + level.definition +"<br/>"+textdb[player.language]['andihave']).fadeIn(t);
 	
 }
 /*onLevelClick functions --- touch();*/
@@ -648,7 +648,7 @@ function hide_definition(t) {
 
 function display_message(t, type) {
     if(type == 1) $('#definition').html("<b class='succes'>" + textdb[player.language]['congrats'] + ", <span id='player-name'>" + player.name +
-        "</span>!</b> " + textdb[player.language]['yourscore'] + ": <b>" + player.totalscore + "</b>").fadeIn(t);
+        "</span>!</b> <br/>" + textdb[player.language]['yourscore'] + ": <b>" + player.totalscore + "</b>").fadeIn(t);
     else $("#definition").html("<b class='error'>" + textdb[player.language]['tryagain'] + "!</b>").fadeIn(t);
 }
 
@@ -777,7 +777,7 @@ textdb = [
  
 },
 {'level':'Level',
- 'iama':'I am a',
+ 'iama':'I am a book in',
  'andihave': 'and around me I have these:',
  'findme':'Who am I?',
  'congrats':'Congrats',
