@@ -36,6 +36,7 @@ function check_old_data() {
 			setval(game+"_acceptedterms",getval(oldgame+"_acceptedterms")); delval(oldgame+"_acceptedterms");
 			setval(game+"_name",getval(oldgame+"_nume")); delval(oldgame+"_nume");
 			setval(game+"_score",getval(oldgame+"_score")); delval(oldgame+"_score");
+			setval(game+"_key",getval(oldgame+"_key")); delval(oldgame+"_key");
 	}
 }
 
