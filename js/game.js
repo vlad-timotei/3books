@@ -756,7 +756,7 @@ function newGame() {
 textdb = [
 {'level':'Nivel',
  'iama':'Sunt o carte din',
- 'andihave': 'și am pe lângă mine pe:',
+ 'andihave': 'și am lângă mine pe:',
  'findme':'Cine sunt?',
  'congrats':'Felicitări',
  'yourscore':'Scorul tău',
