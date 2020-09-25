@@ -69,3 +69,18 @@ Explorator pasionat de provocări și de minunile naturii.
 - custom motivational message
 - optimised server requests
 
+<i> ver 3.0 </i> @ 09.2020
+- en_EN package implemented
+- allow longer solutions in easy mode
+- optimized algorithm
+- advanced data-table statistics
+- sanitized user name limited to 10 chars
+- fixed multiple sound bug
+- solution font-size responsive to level solution size
+- name is now displayed right after registration without refresh needed
+- lvl letters for easy-hard-ro-en-refresh mode stored to prevent cheating
+- injection prevention implemented
+- sound option on-off is remembered
+- userID implemented
+- changed game slug to 3books
+
