@@ -1,4 +1,4 @@
-/* Game created by Vlad Timotei $ver.6.0 @25.09.2020 #ro_en100 */
+/* Game created by Vlad Timotei $ver.3.0 @25.09.2020 #ro_en */
 var game = "3books";
 var oldgame = "3carti_03062020F";
 var level = {}; // solution, solution_lenght, try_lenght, completed, definition, buttons_nr, timeforaudiohint, timeoforhint
